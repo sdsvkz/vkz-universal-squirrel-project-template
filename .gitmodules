@@ -1,0 +1,3 @@
+[submodule "vkzlib"]
+	path = lib/vkzlib
+	url = https://github.com/sdsvkz/vkzlib-squirrel.git

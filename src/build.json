@@ -1,0 +1,4 @@
+{
+    "root": ".",
+    "setup": "../lib/vkzlib/setup/full.setup.nut"
+}
