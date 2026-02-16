@@ -6,8 +6,6 @@ A universal Squirrel project template for structured scripting
 
 - Python 3
 
-
-
 ## File Structure
 
 - `build.bat` / `build.sh`: Build entire project
