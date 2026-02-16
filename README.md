@@ -2,21 +2,27 @@
 
 A universal Squirrel project template for structured scripting
 
+## Requirements
+
+- Python 3
+
+
+
 ## File Structure
 
-- build.bat / build.sh: Build entire project
-- vkzlib.config.nut: configuration file of vkzlib, also serve as project config
-- lib/: Libraries
-    - vkzlib/: My library, provides essentials for the project
-        - build.bat / build.sh: Build vkzlib
-        - build.py: Python script used to build
-        - setup.build.json: Build configuration for module setup scripts
-        - vkzlib.build.json: Build configuration for vkzlib
-        - module/: Scripts related to module system
-        - setup/: Module setup scripts
-- \<project_name\>/: Main project directory
-    - build.bat / build.sh: Build project
-    - \<project_name\>.build.json: Build configurations for project
+- `build.bat` / `build.sh`: Build entire project
+- `vkzlib.config.nut`: configuration file of vkzlib, also serve as project config
+- `lib/`: Libraries
+    - `vkzlib/`: My library, provides essentials for the project
+        - `build.bat` / `build.sh`: Build vkzlib
+        - `build.py`: Python script used to build
+        - `setup.build.json`: Build configuration for module setup scripts
+        - `vkzlib.build.json`: Build configuration for vkzlib
+        - `module/`: Scripts related to module system
+        - `setup/`: Module setup scripts
+- `<project_name>/`: Main project directory
+    - `build.bat` / `build.sh`: Build project
+    - `*.build.json`: Build configurations for project
 
 ## File Naming Convention
 
@@ -109,9 +115,13 @@ Configuration is a json file with following properties:
 ! All path are relative to the directory of build configuration file
 ```
 
+## Compatibility
+
+As
+
 ## Guide
 
-### Use Module System
+### Using Module System
 
 I've written a simple module system similar to `Lua`'s. You can utilize it to organize your code.
 
@@ -196,9 +206,23 @@ To run tests, for example, `project/plant/test/testPlant.entry.nut`:
 sq project/plant/test/testPlant.entry.nut
 ```
 
+### Run as VScript
+
+Tested on Mapbase 8.0
+
+Load a map and open the console, execute:
+
+```shell
+script_execute "project/main.entry.nut"
+```
+
+Just replace `sq` with `script_execute` and it'll works
+
+TODO: Add steps for other methods like Hammer Inputs
+
 ### Advanced
 
-#### If you don't want to build everytime
+#### If you don't want to build
 
 At the moment, build only prepend setup script to input files. If you don't want to build, you can simply create an empty `.in.nut` file, prepend setup script manually, then write your code below. Remember to delete `.in.nut` to avoid unintentional overwrites.
 
