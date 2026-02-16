@@ -6,7 +6,7 @@ A universal Squirrel project template for structured scripting
 
 - build.bat / build.sh: Build entire project
 - vkzlib.config.nut: configuration file of vkzlib, also serve as project config
-- lib/: External libraries
+- lib/: Libraries
     - vkzlib/: My library, provides essentials for the project
         - build.bat / build.sh: Build vkzlib
         - build.py: Python script used to build
@@ -37,7 +37,7 @@ A universal Squirrel project template for structured scripting
 ::VKZLIB_CONFIG <- {
 
     /**
-     * @desc Path to external libraries storage
+     * @desc Path to library storage
      * @type {string}
      */
     LIB_DIR = "lib/",
