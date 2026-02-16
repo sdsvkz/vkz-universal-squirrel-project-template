@@ -121,7 +121,7 @@ You can create scripts that can be run in both squirrel interpreter and Source g
 
 So I created `vkzlib.compat` module that contains a collection of functions and classes from specific environment, but can be used in any supported environment.
 
-If you only want to create scripts for specific environment, say, VScript, you can use VScript project template instead. One advantage is that you don't need to build your code in order to use the module system. Instead, you can just write `IncludeScript("lib/vkzlib/setup/full.setup.nut")` at the top of your scripts and you are good to go
+If you only want to create scripts for specific environment, say, VScript, you can use VScript project template instead. One advantage is that you don't need to build your code in order to use the module system. Instead, you can just write `IncludeScript("lib/vkzlib/setup/full.setup.nut")` at the top of your scripts and you are good to go.
 
 ## Guide
 
@@ -182,21 +182,21 @@ In order to make `require` relative to your project directory, create a file nam
 ::VKZLIB_CONFIG.PROJECT_DIR = "MyProject/"
 ```
 
-For other properties, see [vkzlib Configuration](#vkzlib-configuration)
+For other properties, see [vkzlib Configuration](#vkzlib-configuration).
 
 ### Build
 
-Run `build.bat` or `build.sh` in project directory based on your OS. This will build all `.in.nut` to `.nut`. You build again after editing `.in.nut` files to get update-to-date `.nut` file
+Run `build.bat` or `build.sh` in project directory based on your OS. This will build all `.in.nut` to `.nut`. You build again after editing `.in.nut` files to get update-to-date `.nut` file.
 
-To understand how to use `build.py` to build your files, see [Build Script](#build-script)
+To understand how to use `build.py` to build your files, see [Build Script](#build-script).
 
 ### Run with Squirrel Interpreter
 
-Get a copy of Squirrel interpreter `sq`, make sure it is on `PATH`
+Get a copy of Squirrel interpreter `sq`, make sure it is on `PATH`.
 
-Open a shell and `cd` to this (root) directory
+Open a shell and `cd` to this (root) directory.
 
-You can run files with suffix `.entry.nut`
+You can run files with suffix `.entry.nut`.
 
 To run `project/main.entry.nut`:
 
@@ -212,7 +212,7 @@ sq project/plant/test/testPlant.entry.nut
 
 ### Run as VScript
 
-Tested on Mapbase 8.0
+Tested on Mapbase 8.0.
 
 Load a map and open the console, execute:
 
@@ -220,9 +220,9 @@ Load a map and open the console, execute:
 script_execute "project/main.entry.nut"
 ```
 
-Just replace `sq` with `script_execute` and it'll works
+As you can see, just replace `sq` with `script_execute` and it'll works.
 
-TODO: Add steps for other methods like Hammer Inputs
+TODO: Add steps for other methods like Hammer Inputs.
 
 ### Advanced
 
