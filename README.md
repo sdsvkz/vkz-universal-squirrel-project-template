@@ -1,6 +1,6 @@
 ## Universal Squirrel Project Template
 
-A universal Squirrel project template for structured scripting
+A universal Squirrel project template for structured scripting.
 
 ## Requirements
 
