@@ -115,9 +115,13 @@ Configuration is a json file with following properties:
 ! All path are relative to the directory of build configuration file
 ```
 
-## Compatibility
+## Compatibility Notice
 
-As
+You can create scripts that can be run in both squirrel interpreter and Source games with VScript implementation for squirrel. However, if you have VScript-specific codes in your script, it can't be run with squirrel interpreter. Conversely, if you used Squirrel things disabled by VScript, it can't be run inside Source games.
+
+So I created `vkzlib.compat` module that contains a collection of functions and classes from specific environment, but can be used in any supported environment.
+
+If you only want to create scripts for specific environment, say, VScript, you can use VScript project template instead. One advantage is that you don't need to build your code in order to use the module system. Instead, you can just write `IncludeScript("lib/vkzlib/setup/full.setup.nut")` at the top of your scripts and you are good to go
 
 ## Guide
 
