@@ -30,7 +30,7 @@ if (!("vkz" in getroottable)) {
 	::VKZLIB_CONFIG <- {
 
 		/**
-		 * @desc Path to external libraries storage
+		 * @desc Path to library storage
 		 * @type {string}
 		 */
 		LIB_DIR = "lib/",
@@ -73,10 +73,15 @@ if (!("vkz" in getroottable)) {
 		::print("WARNING: error on loading vkzlib.config.nut from working directory:\n" + e + "\n")
 	}
 
-	local vkzlib = @(path) ::VKZLIB_CONFIG.LIB_DIR + "vkzlib/" + path
+	local vkzlib = function (path) {
+		local VKZLIB_DIR = ::VKZLIB_CONFIG.VKZLIB_DIR
+		if (VKZLIB_DIR == null) {
+			VKZLIB_DIR = ::VKZLIB_CONFIG.LIB_DIR + "vkzlib/"
+		}
+		return VKZLIB_DIR + path
+	}
 
 	runScript(vkzlib("module/export.nut"))
-
 	runScript(vkzlib("module/require.nut"))
 
 	::vkz._internal.vkzlib <- vkzlib
